@@ -1,12 +1,32 @@
+'use client';
+
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import logo from '@/assets/images/logo.png';
 import HamburgerIcon from '@/assets/icons/hamburger-icon';
 
 const Header = () => {
+  const headerRef = React.useRef<HTMLHeadElement>(null);
+
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (scrollPosition > window.scrollY) {
+        headerRef.current!.style.top = '0';
+      } else {
+        headerRef.current!.style.top = '-72px';
+      }
+      setScrollPosition(window.scrollY);
+    });
+  }, [scrollPosition]);
+
   return (
-    <header className="flex items-center justify-between px-5 py-4">
+    <header
+      ref={headerRef}
+      className="sticky left-0 top-0 z-50 flex w-full items-center justify-between px-5 py-4 transition-all duration-300"
+    >
       <div className="relative h-6 w-14">
         <Image src={logo} alt="" fill />
       </div>

@@ -13,7 +13,7 @@ const FeaturedWorkCard = ({ work }: IFeaturedWorkCardProps) => {
   const { title, projectSkills, thumbnail } = work;
   return (
     <div className="relative flex h-[250px] w-full flex-col justify-end bg-gradient-to-t from-black/75 to-transparent px-4 py-3">
-      <Image src={thumbnail} alt="" fill className="-z-10" />
+      <Image src={thumbnail} alt="" fill className="-z-10 object-cover" />
       <h4 className="mb-1 font-anton text-xl">{title}</h4>
       <p className="font-epilogue text-sm">
         {projectSkills.map((skill) => t(`${skill}`)).join(', ')}
