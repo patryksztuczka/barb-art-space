@@ -12,7 +12,9 @@ export default function Index() {
   return (
     <div>
       <section className="mb-6 mt-5 px-5">
-        <h1 className="font-glamora mb-5 text-[78px]">{t('welcome')}</h1>
+        <h1 className="font-glamora mb-5 select-none text-[78px]">
+          {t('welcome')}
+        </h1>
         <h3 className="mb-10 font-anton text-xl">
           {t('helloMyNameIsBarbara')}
         </h3>
@@ -28,9 +30,14 @@ export default function Index() {
       </section>
       <InfiniteMarquee />
       <section className="mt-[54px] px-5">
-        <h2 className="font-glamora mb-5 text-center text-[28px]">
-          {t('featuredWork')}
-        </h2>
+        <div className="mb-5 flex items-center justify-center gap-4">
+          <Image src={blurrySubtract} alt="" width={40} height={40} />
+
+          <h2 className="font-glamora text-center text-[28px]">
+            {t('featuredWork')}
+          </h2>
+          <Image src={blurrySubtract} alt="" width={40} height={40} />
+        </div>
         <div className="flex flex-col gap-5">
           {featuredWork.map((work) => (
             <FeaturedWorkCard key={work.id} work={work} />

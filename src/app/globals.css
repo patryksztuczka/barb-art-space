@@ -7,3 +7,9 @@
     @apply text-white;
   }
 }
+
+@layer utilities {
+  .grain-bg {
+    background-image: url('/images/grain.png');
+  }
+}
