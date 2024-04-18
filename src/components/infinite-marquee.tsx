@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
+
 import Subtract from '@/assets/icons/subtract';
 
 const InfiniteMarquee = () => {
@@ -7,7 +8,7 @@ const InfiniteMarquee = () => {
 
   return (
     <div className="flex overflow-hidden whitespace-nowrap border-b border-t py-4">
-      {Array.from({ length: 10 }).map((_, index) => (
+      {Array.from({ length: 2 }).map((_, index) => (
         <div key={index} className="flex animate-marquee items-center">
           <span className="px-2 font-anton xl:text-xl">
             {t('classicalArts')}
