@@ -6,21 +6,35 @@ const InfiniteMarquee = () => {
   const t = useTranslations();
 
   return (
-    <div className=" overflow-hidden border-b border-t py-4">
-      <div className="animate-marquee flex items-center gap-4">
-        <span className="font-anton  whitespace-nowrap xl:text-xl">
-          {t('classicalArts')}
-        </span>
-        <span className="font-anton  whitespace-nowrap xl:text-xl">
-          {t('userInterface')}
-        </span>
-        <span className="font-anton  whitespace-nowrap xl:text-xl">
-          {t('userExperience')}
-        </span>
-        <span className="font-anton  whitespace-nowrap xl:text-xl">
-          {t('graphicDesign')}
-        </span>
-      </div>
+    <div className="flex overflow-hidden whitespace-nowrap border-b border-t py-4">
+      {Array.from({ length: 10 }).map((_, index) => (
+        <div key={index} className="flex animate-marquee items-center">
+          <span className="px-2 font-anton xl:text-xl">
+            {t('classicalArts')}
+          </span>
+          <div>
+            <Subtract />
+          </div>
+          <span className="px-2 font-anton xl:text-xl">
+            {t('userInterface')}
+          </span>
+          <div>
+            <Subtract />
+          </div>
+          <span className="px-2 font-anton xl:text-xl">
+            {t('userExperience')}
+          </span>
+          <div>
+            <Subtract />
+          </div>
+          <span className="px-2 font-anton xl:text-xl">
+            {t('graphicDesign')}
+          </span>
+          <div>
+            <Subtract />
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

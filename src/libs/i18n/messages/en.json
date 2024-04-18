@@ -5,5 +5,8 @@
   "classicalArts": "Classical Arts",
   "userInterface": "User Interface",
   "userExperience": "User Experience",
-  "graphicDesign": "Graphic Design"
+  "graphicDesign": "Graphic Design",
+  "collabUserInterface": "User Interface (collaborative work)",
+  "collabUserExperience": "User Experience (collaborative work)",
+  "featuredWork": "Featured Work"
 }

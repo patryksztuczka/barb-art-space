@@ -11,9 +11,10 @@ const config: Config = {
       fontFamily: {
         epilogue: ['var(--font-epilogue)'],
         anton: ['var(--font-anton)'],
+        glamora: ['var(--font-glamora)'],
       },
       animation: {
-        marquee: 'marquee 20s linear infinite',
+        marquee: 'marquee 10s infinite linear',
       },
       keyframes: {
         marquee: {
