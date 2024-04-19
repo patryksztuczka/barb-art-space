@@ -32,7 +32,6 @@ export default function Index() {
       <section className="mt-[54px] px-5">
         <div className="mb-5 flex items-center justify-center gap-4">
           <Image src={blurrySubtract} alt="" width={40} height={40} />
-
           <h2 className="font-glamora text-center text-[28px]">
             {t('featuredWork')}
           </h2>
