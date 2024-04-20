@@ -8,5 +8,10 @@
   "graphicDesign": "Graphic Design",
   "collabUserInterface": "User Interface (collaborative work)",
   "collabUserExperience": "User Experience (collaborative work)",
-  "featuredWork": "Featured Work"
+  "featuredWork": "Featured Work",
+  "otherWork": "Other Work",
+  "work": "Work",
+  "aboutMe": "About Me",
+  "resume": "Resume",
+  "helloThere": "Hello there!"
 }
