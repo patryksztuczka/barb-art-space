@@ -37,4 +37,4 @@ export const featuredWork: IFeaturedWork[] = [
     thumbnail: '/images/endorfina-thumbnail.png',
     icon: FigmaIcon,
   },
-];
+] as const;

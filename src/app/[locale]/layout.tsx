@@ -3,6 +3,7 @@ import localfont from 'next/font/local';
 
 import Header from '@/components/header';
 import '../globals.css';
+import Footer from '@/components/footer';
 
 const epilogue = Epilogue({
   subsets: ['latin'],
@@ -44,6 +45,7 @@ export default function LocaleLayout({
         <main className="flex w-screen flex-col items-center overflow-hidden">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

@@ -13,5 +13,5 @@ export interface IOtherWork {
   title: string;
   description: string;
   thumbnail: string;
-  icon: ElementType;
+  icons?: ElementType[];
 }

@@ -39,12 +39,22 @@ export default function Index() {
           </div>
         </Section>
         <Section title={t('aboutMe')}>
-          <div className="relative aspect-auto w-full">
-            <Image src={barbImage} alt="" fill />
+          <div className="flex flex-col items-center xl:flex-row-reverse xl:gap-20 xl:px-9">
+            <div className="relative aspect-[6/9] max-h-[400px] w-full max-w-[353px] xl:aspect-auto xl:h-[650px] xl:max-w-[400px]">
+              <Image src={barbImage} alt="" fill />
+            </div>
+            <div>
+              <h3 className="mt-5 flex h-[67px] select-none items-center font-glamora text-[54px] leading-none xl:mt-0 xl:h-auto xl:text-[100px]">
+                {t('helloThere')}
+              </h3>
+              <h3 className="mt-5 font-anton text-xl xl:mt-8">
+                {t('welcomeToMyWorld')}
+              </h3>
+              <p className="mt-5 whitespace-pre-line pb-[54px] font-epilogue leading-[30px] xl:mt-8">
+                {t('aboutMeDescription')}
+              </p>
+            </div>
           </div>
-          <h3 className="select-none font-glamora text-[54px]">
-            {t('helloThere')}
-          </h3>
         </Section>
       </div>
     </>

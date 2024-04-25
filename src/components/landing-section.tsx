@@ -17,7 +17,7 @@ const LandingSection = () => {
         <h3 className="mt-10 pl-1 font-anton text-xl xl:pl-4">
           {t('helloMyNameIsBarbara')}
         </h3>
-        <p className="mt-10 pl-1 font-epilogue font-light xl:mt-[54px] xl:pl-4">
+        <p className="mt-10 pl-1 font-epilogue font-light leading-[30px] xl:mt-[54px] xl:pl-4">
           {t.rich('intro', {
             bold: (chunks) => <span className="font-bold">{chunks}</span>,
           })}
