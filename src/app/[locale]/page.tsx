@@ -8,27 +8,33 @@ import FeaturedWorkCard from '@/components/featured-work-card';
 import SectionHeading from '@/components/section-heading';
 import Section from '@/components/section';
 import LandingSection from '@/components/landing-section';
+import { otherWork } from '@/utils/constants/other-work';
+import OtherWorkCard from '@/components/other-work-card';
 
 export default function Index() {
   const t = useTranslations();
   return (
     <>
-      <div className="xl:max-w-7xl">
+      <div className="w-full xl:max-w-7xl">
         <LandingSection />
       </div>
       <InfiniteMarquee />
-      <div className="xl:max-w-7xl">
+      <div className="w-full xl:max-w-7xl">
         <Section title={t('featuredWork')}>
-          <div className="flex flex-col gap-5">
-            {featuredWork.map((work) => (
-              <FeaturedWorkCard key={work.id} work={work} />
+          <div className="grid gap-5 xl:grid-cols-2 xl:gap-6">
+            {featuredWork.map((work, index) => (
+              <FeaturedWorkCard
+                key={work.id}
+                work={work}
+                takeWholeRow={index !== 2 && index !== 3}
+              />
             ))}
           </div>
         </Section>
         <Section title={t('otherWork')}>
-          <div className="flex flex-col gap-5">
-            {featuredWork.map((work) => (
-              <FeaturedWorkCard key={work.id} work={work} />
+          <div className="grid gap-5 xl:grid-cols-3 xl:gap-6">
+            {otherWork.map((work) => (
+              <OtherWorkCard key={work.id} work={work} />
             ))}
           </div>
         </Section>

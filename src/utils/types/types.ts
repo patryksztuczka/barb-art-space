@@ -7,3 +7,11 @@ export interface IFeaturedWork {
   thumbnail: string;
   icon: ElementType;
 }
+
+export interface IOtherWork {
+  id: number;
+  title: string;
+  description: string;
+  thumbnail: string;
+  icon: ElementType;
+}
