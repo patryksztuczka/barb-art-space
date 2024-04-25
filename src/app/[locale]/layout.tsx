@@ -41,7 +41,9 @@ export default function LocaleLayout({
       <body className="flex flex-col overflow-x-hidden bg-[#03030A] xl:items-center">
         <div className="grain-bg fixed left-0 top-0 -z-10 h-screen w-full bg-repeat opacity-5" />
         <Header />
-        <main className="xl:flex xl:justify-center">{children}</main>
+        <main className="flex w-screen flex-col items-center overflow-hidden">
+          {children}
+        </main>
       </body>
     </html>
   );

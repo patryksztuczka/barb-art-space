@@ -36,7 +36,7 @@ const Header = () => {
       </button>
       <nav className="hidden xl:flex xl:gap-6">
         <NavigationLink href="/work" label="Work" />
-        <NavigationLink href="/about" label="About" />
+        <NavigationLink href="/about" label="About me" />
         <NavigationLink href="/resume" label="resume" />
       </nav>
     </header>

@@ -9,7 +9,7 @@ interface ISectionProps {
 
 const Section = ({ title, children }: ISectionProps) => {
   return (
-    <section className="mt-[54px] px-5">
+    <section className="px-5 pt-[54px] xl:px-6 xl:pt-[90px]">
       <SectionHeading title={title} />
       {children}
     </section>
