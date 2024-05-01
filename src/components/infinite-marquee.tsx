@@ -9,7 +9,10 @@ const InfiniteMarquee = () => {
   return (
     <div className="flex h-fit select-none overflow-hidden whitespace-nowrap border-b border-t py-4">
       {Array.from({ length: 6 }).map((_, index) => (
-        <div key={index} className="flex animate-marquee items-center">
+        <div
+          key={index}
+          className="flex animate-marquee items-center uppercase"
+        >
           <span className="px-2 font-anton xl:text-xl">
             {t('classicalArts')}
           </span>

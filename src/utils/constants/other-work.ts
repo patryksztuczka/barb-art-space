@@ -13,15 +13,15 @@ export const otherWork: IOtherWork[] = [
   },
   {
     id: 2,
-    title: 'Stil life study',
-    description: 'stillLifeStudyDescription1',
-    thumbnail: '/images/still-life-study-thumbnail1.png',
+    title: 'Notes from April',
+    description: 'notesFromAprilDescription',
+    thumbnail: '/images/notes-from-april-thumbnail.jpeg',
   },
   {
     id: 3,
-    title: 'Still life study',
-    description: 'stillLifeStudyDescription2',
-    thumbnail: '/images/still-life-study-thumbnail2.png',
+    title: 'Stil life study',
+    description: 'stillLifeStudyDescription',
+    thumbnail: '/images/still-life-study-thumbnail.png',
   },
   {
     id: 4,

@@ -6,6 +6,7 @@ export interface IFeaturedWork {
   projectSkills: string[];
   thumbnail: string;
   icon: ElementType;
+  route: string;
 }
 
 export interface IOtherWork {

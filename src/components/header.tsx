@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import HamburgerIcon from '@/assets/icons/hamburger-icon';
 import NavigationLink from './navigation-link';
 import Logo from './logo';
+import { ROUTES } from '@/utils/constants/constants';
 
 const Header = () => {
   const headerRef = React.useRef<HTMLHeadElement>(null);
@@ -33,8 +34,8 @@ const Header = () => {
         <HamburgerIcon />
       </button>
       <nav className="hidden xl:flex xl:gap-6">
-        <NavigationLink href="/work" label="Work" />
-        <NavigationLink href="/about" label="About me" />
+        <NavigationLink href={ROUTES.workSection} label="Work" />
+        <NavigationLink href={ROUTES.aboutSection} label="About me" />
         <NavigationLink href="/resume" label="resume" />
       </nav>
     </header>

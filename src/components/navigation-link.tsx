@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 interface INavigationLinkProps {
@@ -7,9 +8,12 @@ interface INavigationLinkProps {
 
 const NavigationLink = ({ href, label }: INavigationLinkProps) => {
   return (
-    <div className="from-[#FF004D] to-[#FF9000] font-anton uppercase hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent">
+    <Link
+      href={href}
+      className="from-[#FF004D] to-[#FF9000] font-anton uppercase hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent"
+    >
       {label}
-    </div>
+    </Link>
   );
 };
 

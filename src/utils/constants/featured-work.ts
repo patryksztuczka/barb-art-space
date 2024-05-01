@@ -1,5 +1,6 @@
 import { IFeaturedWork } from '../types/types';
 import FigmaIcon from '@/assets/icons/figma-icon';
+import { ROUTES } from './constants';
 
 export const featuredWork: IFeaturedWork[] = [
   {
@@ -8,6 +9,7 @@ export const featuredWork: IFeaturedWork[] = [
     projectSkills: ['userExperience', 'userInterface', 'graphicDesign'],
     thumbnail: '/images/idnow-thumbnail.png',
     icon: FigmaIcon,
+    route: ROUTES.idNow,
   },
   {
     id: 2,
@@ -15,6 +17,7 @@ export const featuredWork: IFeaturedWork[] = [
     projectSkills: ['userInterface'],
     thumbnail: '/images/candid-thumbnail.png',
     icon: FigmaIcon,
+    route: ROUTES.candid,
   },
   {
     id: 3,
@@ -22,6 +25,7 @@ export const featuredWork: IFeaturedWork[] = [
     projectSkills: ['collabUserInterface'],
     thumbnail: '/images/sun-festival-thumbnail.png',
     icon: FigmaIcon,
+    route: ROUTES.sunFestival,
   },
   {
     id: 4,
@@ -29,6 +33,7 @@ export const featuredWork: IFeaturedWork[] = [
     projectSkills: ['userInterface', 'collabUserExperience'],
     thumbnail: '/images/lgeniusz-thumbnail.png',
     icon: FigmaIcon,
+    route: ROUTES.lGeniusz,
   },
   {
     id: 5,
@@ -36,5 +41,6 @@ export const featuredWork: IFeaturedWork[] = [
     projectSkills: ['userInterface'],
     thumbnail: '/images/endorfina-thumbnail.png',
     icon: FigmaIcon,
+    route: ROUTES.endorfina,
   },
 ] as const;
