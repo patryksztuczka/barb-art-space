@@ -56,5 +56,13 @@
   "idNowChallengesAndLearningParagraph": "Aligning the app's functionality with diverse governmental standards posed a significant challenge, requiring continuous updates and adaptability. This endeavor highlighted the necessity of a user-centered approach and flexible design strategies.",
   "idNowLogoDesignParagraph": "Designed a simple, flat logo using tweaked typography to complement a vibrant grainy gradient background, which is featured on the splash screen and app icons on the App Store and Play Store.",
   "idNowDocumentCardsParagraph": "Developed minimalist flat design for the document cards displayed on the main screen, in line with the investor's preferences for simplicity and clarity.",
-  "idNowDevelopmentParagraph": "Undertook the User Interface design and prototyping phase, which was completed in about 20 hours, focusing on translating the user flow and low-fidelity mockups into high-fidelity prototypes."
+  "idNowDevelopmentParagraph": "Undertook the User Interface design and prototyping phase, which was completed in about 20 hours, focusing on translating the user flow and low-fidelity mockups into high-fidelity prototypes.",
+  "sunFestivalProjectOverviewParagraph": "The app is a hub for all Sun Festival goers, providing personalized schedules with performance alerts, an interactive map, and artist information. Enhanced with real-time updates, it simplifies planning and enriches the festival experience by ensuring seamless navigation and engagement.",
+  "lgeniuszProjectOverviewParagraph": "ŁGenius is an educational tool that helps you prepare low glycemic index meals tailored to your health. It features a time-saving dietary calculator for precise nutrient balancing and allows you to document your dishes with photos and detailed descriptions.",
+  "endorfinaProjectOverviewParagraph": "Designed with cosmetics fans in mind, the Endorfina app is your daily motivational tool to lead a healthy and active lifestyle. Thanks to innovative integration with a step counter, every step you take is converted into dragonflies – a unique currency that can be exchanged for unique rewards and exclusive coupons at the Kamila Wybrańczyk store.",
+  "lgeniuszSubtitle": "ŁGeniusz - Indeks glikemiczny",
+  "endorfinaSubtitle": "by Kamila Wybrańczyk",
+  "sunFestivalRole": "ROLE : UI DESIGNER (collaborative work) | 2022",
+  "lgeniuszRole": "ROLE : UI DESIGNER (collaborative work) | 2022",
+  "endorfinaRole": "ROLE : UI DESIGNER (collaborative work) | 2023"
 }

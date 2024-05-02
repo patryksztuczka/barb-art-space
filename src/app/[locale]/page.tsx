@@ -3,13 +3,12 @@ import Image from 'next/image';
 
 import barbImage from '@/assets/images/barb.png';
 import InfiniteMarquee from '@/components/infinite-marquee';
-import { featuredWork } from '@/utils/constants/featured-work';
 import FeaturedWorkCard from '@/components/featured-work-card';
 import SectionHeading from '@/components/section-heading';
 import Section from '@/components/section';
 import LandingSection from '@/components/landing-section';
-import { otherWork } from '@/utils/constants/other-work';
 import OtherWorkCard from '@/components/other-work-card';
+import { featuredWork, otherWork } from '@/utils/constants/constants';
 
 export default function Index({
   params: { locale },
