@@ -39,7 +39,7 @@ const Header = () => {
     <header
       ref={headerRef}
       className={clsx(
-        'sticky left-0 top-0 z-50 flex w-full items-center justify-between bg-gradient-to-b from-black/75 to-transparent px-5 py-4 transition-all duration-300 xl:max-w-7xl',
+        'sticky left-0 top-0 z-30 flex w-full items-center justify-between bg-gradient-to-b from-black/75 to-transparent px-5 py-4 transition-all duration-300 xl:max-w-7xl',
         isMenuOpen && 'bg-black',
       )}
     >
@@ -55,10 +55,8 @@ const Header = () => {
       />
       <div
         className={clsx(
-          'absolute right-0 top-full flex w-full flex-col gap-4 bg-black px-6 py-4 transition-all duration-300',
-          isMenuOpen
-            ? 'visible translate-x-0 opacity-100'
-            : 'invisible translate-x-6 opacity-0',
+          'absolute right-0 top-full z-50 flex w-full flex-col gap-4 bg-black px-6 py-4 transition-all duration-300',
+          isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0',
         )}
       >
         <NavigationLink
