@@ -122,6 +122,18 @@ export const featuredWorkCaseStudy = [
     ],
   },
   {
+    id: 'candid',
+    title: 'Candid',
+    role: 'candidRole',
+    projectOverview: 'candidProjectOverviewParagraph',
+    images: [
+      '/images/featured-work/candid/candid-thumbnail.png',
+      '/images/featured-work/candid/candid-2.png',
+      '/images/featured-work/candid/candid-3.png',
+      '/images/featured-work/candid/candid-4.png',
+    ],
+  },
+  {
     id: 'endorfina',
     title: 'Endorfina',
     subtitle: 'endorfinaSubtitle',
