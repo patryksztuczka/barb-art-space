@@ -70,10 +70,10 @@ const Header = () => {
           onClick={handleLinkClick}
         />
         <NavigationLink
-          href="/resume.pdf"
+          href="/files/resume.pdf"
           label="resume"
-          download
           onClick={handleLinkClick}
+          target="_blank"
         />
       </div>
       <nav className="hidden xl:flex xl:gap-6">
