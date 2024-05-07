@@ -79,7 +79,12 @@ const Header = () => {
       <nav className="hidden xl:flex xl:gap-6">
         <NavigationLink href={ROUTES.workSection} label="Work" />
         <NavigationLink href={ROUTES.aboutSection} label="About me" />
-        <NavigationLink href="/resume" label="resume" />
+        <NavigationLink
+          href="/files/resume.pdf"
+          label="resume"
+          onClick={handleLinkClick}
+          target="_blank"
+        />
       </nav>
     </header>
   );
