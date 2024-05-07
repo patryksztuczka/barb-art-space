@@ -18,12 +18,14 @@ const FeaturedWorkCard = ({
   takeWholeRow,
 }: IFeaturedWorkCardProps) => {
   const t = useTranslations();
+
   const { title, projectSkills, thumbnail, icon, route } = work;
+
   return (
     <Link
       href={`/${locale}${route}`}
       className={clsx(
-        'group relative flex aspect-square h-[353px] w-full items-end justify-between gap-4 overflow-hidden bg-gradient-to-t from-black/75 to-transparent px-4 py-3 xl:aspect-auto xl:h-[550px] xl:w-full xl:flex-col xl:items-start xl:justify-end xl:gap-2 xl:bg-none xl:hover:bg-gradient-to-t',
+        'group relative flex aspect-square h-[353px] w-full select-none items-end justify-between gap-4 overflow-hidden bg-gradient-to-t from-black/75 to-transparent px-4 py-3 xl:aspect-auto xl:h-[550px] xl:w-full xl:flex-col xl:items-start xl:justify-end xl:gap-2 xl:bg-none xl:hover:bg-gradient-to-t',
         takeWholeRow && 'xl:col-span-2',
       )}
     >

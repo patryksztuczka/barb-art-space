@@ -1,10 +1,8 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-import barbImage from '@/assets/images/barb.png';
 import InfiniteMarquee from '@/components/infinite-marquee';
 import FeaturedWorkCard from '@/components/featured-work-card';
-import SectionHeading from '@/components/section-heading';
 import Section from '@/components/section';
 import LandingSection from '@/components/landing-section';
 import OtherWorkCard from '@/components/other-work-card';
@@ -44,9 +42,13 @@ export default function Index({
         </Section>
         <Section id="about" title={t('aboutMe')}>
           <div className="flex flex-col items-center xl:flex-row-reverse xl:gap-20 xl:px-9">
-            <div className="relative aspect-[6/9] max-h-[400px] w-full max-w-[353px] xl:aspect-auto xl:h-[650px] xl:max-w-[400px]">
-              <Image src={barbImage} alt="" fill />
-            </div>
+            <picture className="relative aspect-[8/9] w-full max-w-[400px] select-none xl:h-[650px]">
+              <source
+                srcSet="/images/barb-large.png"
+                media="(min-width: 1280px)"
+              />
+              <Image src="/images/barb.png" alt="" fill />
+            </picture>
             <div>
               <h3 className="mt-5 flex h-[67px] select-none items-center font-glamora text-[54px] leading-none xl:mt-0 xl:h-auto xl:text-[100px]">
                 {t('helloThere')}

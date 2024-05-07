@@ -9,36 +9,46 @@ const IdNowPage = () => {
   const t = useTranslations();
   return (
     <div className="grid w-full grid-cols-1 p-5 xl:max-w-7xl xl:grid-cols-2 xl:gap-x-[90px] xl:px-6 xl:py-4">
-      <section>
-        <h1 className="mb-6 font-glamora text-[78px] leading-none">
-          {t('idNow')}
-        </h1>
-        <p className="mb-6 bg-gradient-to-r from-[#FF004D] to-[#FF9000] bg-clip-text font-anton text-xl uppercase text-transparent">
-          {t('idNowRole')}
-        </p>
-        <section className="flex flex-col gap-6">
-          <div className="flex items-center gap-6">
-            <h2 className="after:content-blurry-subtract font-anton text-xl uppercase">
-              {t('projectOverview')}
-            </h2>
-            <Image src={blurrySubtract} alt="" width={32} height={32} />
-          </div>
-          <p className="font-epilogue leading-[30px]">
-            {t('idNowProjectOverviewParagraph')}
+      <section className="flex flex-col gap-6 pb-6 pt-5 xl:col-span-2 xl:flex-row xl:gap-10 xl:pb-10 xl:pt-4">
+        <div className="flex flex-col gap-6 xl:justify-center xl:gap-[42px]">
+          <h1 className="mb-6 font-glamora text-[62px] leading-none">
+            {t('idNow')}
+          </h1>
+          <p className="mb-6 bg-gradient-to-r from-[#FF004D] to-[#FF9000] bg-clip-text font-anton text-xl uppercase text-transparent">
+            {t('idNowRole')}
           </p>
-        </section>
+          <section className="flex flex-col gap-6">
+            <div className="flex items-center gap-6">
+              <h2 className="after:content-blurry-subtract font-anton text-xl uppercase">
+                {t('projectOverview')}
+              </h2>
+              <Image src={blurrySubtract} alt="" width={32} height={32} />
+            </div>
+            <p className="font-epilogue leading-[30px]">
+              {t('idNowProjectOverviewParagraph')}
+            </p>
+          </section>
+        </div>
+        <div className="relative h-[250px] w-full xl:h-[500px] xl:w-[800px] xl:min-w-[800px]">
+          <Image
+            src="/images/featured-work/id-now/idnow-thumbnail.png"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
       </section>
-      <div className="relative my-6 h-[250px] xl:mb-10 xl:mt-0 xl:h-[470px]">
+      {/* <div className="relative my-6 h-[250px] xl:mb-10 xl:mt-0 xl:h-[470px]">
         <Image
-          src="/images/idnow-thumbnail.png"
+          src="/images/featured-work/id-now/idnow-thumbnail.png"
           alt=""
           fill
           className="object-cover"
         />
-      </div>
+      </div> */}
       <div className="relative mb-6 h-[250px] xl:col-span-2 xl:mb-10 xl:h-[650px]">
         <Image
-          src="/images/id-now-2.png"
+          src="/images/featured-work/id-now/id-now-2.png"
           alt=""
           fill
           className="object-cover"
@@ -46,7 +56,7 @@ const IdNowPage = () => {
       </div>
       <div className="relative mb-[54px] h-[250px] xl:col-span-2 xl:mb-[90px] xl:h-[650px]">
         <Image
-          src="/images/id-now-3.png"
+          src="/images/featured-work/id-now/id-now-3.png"
           alt=""
           fill
           className="object-cover"
@@ -166,17 +176,21 @@ const IdNowPage = () => {
             </li>
           </ul>
           <div className="relative mb-7 mt-5 h-[181px] xl:h-[613px]">
-            <Image src="/images/id-now-flow.svg" alt="" fill />
+            <Image
+              src="/images/featured-work/id-now/id-now-flow.svg"
+              alt=""
+              fill
+            />
           </div>
           <div className="relative h-[241px] xl:h-[337px]">
             <Image
-              src="/images/id-now-lofi.png"
+              src="/images/featured-work/id-now/id-now-lofi.png"
               alt=""
               fill
               className="object-contain"
             />
             <Image
-              src="/images/id-now-ux.png"
+              src="/images/featured-work/id-now/id-now-ux.png"
               alt=""
               fill
               className="animate-reveal object-contain"

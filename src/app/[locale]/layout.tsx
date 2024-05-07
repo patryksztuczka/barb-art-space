@@ -4,6 +4,8 @@ import localfont from 'next/font/local';
 import Header from '@/components/header';
 import '../globals.css';
 import Footer from '@/components/footer';
+import { Metadata } from 'next';
+import { ReactNode } from 'react';
 
 const epilogue = Epilogue({
   subsets: ['latin'],
@@ -27,11 +29,15 @@ const glamora = localfont({
   variable: '--font-glamora',
 });
 
+export const metadata: Metadata = {
+  title: 'Barbara Morawiak',
+};
+
 export default function LocaleLayout({
   children,
   params: { locale },
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   params: { locale: string };
 }) {
   return (

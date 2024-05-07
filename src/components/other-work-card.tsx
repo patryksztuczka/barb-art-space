@@ -11,7 +11,7 @@ const OtherWorkCard = ({ work }: IOtherWorkCardProps) => {
   const t = useTranslations();
   const { title, description, thumbnail, icons } = work;
   return (
-    <div className="group relative flex aspect-square h-[353px] w-full items-end justify-between gap-4 overflow-hidden bg-gradient-to-t from-black/75 to-transparent px-4 py-3 xl:aspect-auto xl:h-[500px] xl:w-full xl:gap-2 xl:bg-none xl:hover:bg-gradient-to-t">
+    <div className="group relative flex aspect-square h-[353px] w-full select-none items-end justify-between gap-4 overflow-hidden bg-gradient-to-t from-black/75 to-transparent px-4 py-3 xl:aspect-auto xl:h-[500px] xl:w-full xl:gap-2 xl:bg-none xl:hover:bg-gradient-to-t">
       <Image
         src={thumbnail}
         className="-z-10 scale-110 object-cover xl:transition-transform xl:group-hover:scale-100"

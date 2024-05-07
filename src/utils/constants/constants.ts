@@ -10,8 +10,8 @@ export const ROUTES = {
   sunFestival: '/sun-festival',
   lGeniusz: '/lgeniusz',
   endorfina: '/endorfina',
-  workSection: '#work',
-  aboutSection: '#about',
+  workSection: '/#work',
+  aboutSection: '/#about',
 } as const;
 
 export const featuredWork: IFeaturedWork[] = [
@@ -42,7 +42,7 @@ export const featuredWork: IFeaturedWork[] = [
   {
     id: 4,
     title: 'ŁGeniusz - Indeks glikemiczny',
-    projectSkills: ['userInterface', 'collabUserExperience'],
+    projectSkills: ['collabUserInterface'],
     thumbnail: '/images/featured-work/lgeniusz/lgeniusz-thumbnail.png',
     icon: FigmaIcon,
     route: ROUTES.lGeniusz,
@@ -69,7 +69,7 @@ export const otherWork: IOtherWork[] = [
     id: 2,
     title: 'Notes from April',
     description: 'notesFromAprilDescription',
-    thumbnail: '/images/other-work/notes-from-april-thumbnail.jpeg',
+    thumbnail: '/images/other-work/notes-from-april-thumbnail.jpg',
   },
   {
     id: 3,
