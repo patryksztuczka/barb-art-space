@@ -1,5 +1,6 @@
 import { Epilogue, Anton } from 'next/font/google';
 import localfont from 'next/font/local';
+import { Analytics } from '@vercel/analytics/react';
 
 import Header from '@/components/header';
 import '../globals.css';
@@ -52,6 +53,7 @@ export default function LocaleLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
