@@ -1,12 +1,15 @@
+import { Metadata } from 'next';
+import { ReactNode } from 'react';
 import { Epilogue, Anton } from 'next/font/google';
 import localfont from 'next/font/local';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
 
 import Header from '@/components/header';
-import '../globals.css';
 import Footer from '@/components/footer';
-import { Metadata } from 'next';
-import { ReactNode } from 'react';
+import { locales } from '@/libs/i18n/config';
+
+import '../globals.css';
 
 const epilogue = Epilogue({
   subsets: ['latin'],
@@ -30,6 +33,10 @@ const glamora = localfont({
   variable: '--font-glamora',
 });
 
+export const generateStaticParams = () => {
+  return locales.map((locale) => ({ locale }));
+};
+
 export const metadata: Metadata = {
   title: 'Barbara Morawiak',
 };
@@ -41,6 +48,8 @@ export default function LocaleLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
+  unstable_setRequestLocale(locale);
+
   return (
     <html
       lang={locale}

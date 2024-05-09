@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import InfiniteMarquee from '@/components/infinite-marquee';
 import FeaturedWorkCard from '@/components/featured-work-card';
@@ -13,6 +14,7 @@ export default function Index({
 }: {
   params: { locale: string };
 }) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations();
   return (
     <>
