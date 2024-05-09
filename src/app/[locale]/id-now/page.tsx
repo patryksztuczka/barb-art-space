@@ -1,10 +1,10 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import blurrySubtract from '@/assets/images/blurry-subtract.svg';
 import Subtract from '@/assets/icons/subtract';
-import { unstable_setRequestLocale } from 'next-intl/server';
 
 interface Params {
   params: {
