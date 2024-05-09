@@ -1,10 +1,10 @@
 import React, { createElement } from 'react';
-
-import { IFeaturedWork } from '@/utils/types/types';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import clsx from 'clsx';
 import Link from 'next/link';
+
+import { IFeaturedWork } from '@/utils/types/types';
 
 interface IFeaturedWorkCardProps {
   locale: string;

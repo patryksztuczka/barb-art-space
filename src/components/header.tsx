@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import clsx from 'clsx';
 
 import HamburgerIcon from '@/assets/icons/hamburger-icon';
-import NavigationLink from './navigation-link';
+
 import Logo from './logo';
-import { ROUTES } from '@/utils/constants/constants';
-import clsx from 'clsx';
+import HeaderLinks from './header-links';
 
 const Header = () => {
   const headerRef = React.useRef<HTMLHeadElement>(null);
@@ -59,32 +59,10 @@ const Header = () => {
           isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0',
         )}
       >
-        <NavigationLink
-          href={ROUTES.workSection}
-          label="Work"
-          onClick={handleLinkClick}
-        />
-        <NavigationLink
-          href={ROUTES.aboutSection}
-          label="About me"
-          onClick={handleLinkClick}
-        />
-        <NavigationLink
-          href="/files/resume.pdf"
-          label="resume"
-          onClick={handleLinkClick}
-          target="_blank"
-        />
+        <HeaderLinks handleLinkClick={handleLinkClick} />
       </div>
       <nav className="hidden xl:flex xl:gap-6">
-        <NavigationLink href={ROUTES.workSection} label="Work" />
-        <NavigationLink href={ROUTES.aboutSection} label="About me" />
-        <NavigationLink
-          href="/files/resume.pdf"
-          label="resume"
-          onClick={handleLinkClick}
-          target="_blank"
-        />
+        <HeaderLinks handleLinkClick={handleLinkClick} />
       </nav>
     </header>
   );

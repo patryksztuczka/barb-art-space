@@ -1,3 +1,5 @@
+import React, { ReactNode } from 'react';
+import { Metadata } from 'next';
 import { Epilogue, Anton } from 'next/font/google';
 import localfont from 'next/font/local';
 import { Analytics } from '@vercel/analytics/react';
@@ -5,8 +7,6 @@ import { Analytics } from '@vercel/analytics/react';
 import Header from '@/components/header';
 import '../globals.css';
 import Footer from '@/components/footer';
-import { Metadata } from 'next';
-import { ReactNode } from 'react';
 
 const epilogue = Epilogue({
   subsets: ['latin'],
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
   title: 'Barbara Morawiak',
 };
 
-export default function LocaleLayout({
+const LocaleLayout = ({
   children,
   params: { locale },
 }: {
   children: ReactNode;
   params: { locale: string };
-}) {
+}) => {
   return (
     <html
       lang={locale}
@@ -57,4 +57,6 @@ export default function LocaleLayout({
       </body>
     </html>
   );
-}
+};
+
+export default LocaleLayout;

@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 
 import Subtract from '@/assets/icons/subtract';
+import { marqueeSkills } from '@/utils/constants/constants';
 
 const InfiniteMarquee = () => {
   const t = useTranslations();
@@ -13,30 +14,14 @@ const InfiniteMarquee = () => {
           key={index}
           className="flex animate-marquee items-center uppercase"
         >
-          <span className="px-2 font-anton xl:text-xl">
-            {t('classicalArts')}
-          </span>
-          <div>
-            <Subtract />
-          </div>
-          <span className="px-2 font-anton xl:text-xl">
-            {t('userInterface')}
-          </span>
-          <div>
-            <Subtract />
-          </div>
-          <span className="px-2 font-anton xl:text-xl">
-            {t('userExperience')}
-          </span>
-          <div>
-            <Subtract />
-          </div>
-          <span className="px-2 font-anton xl:text-xl">
-            {t('graphicDesign')}
-          </span>
-          <div>
-            <Subtract />
-          </div>
+          {marqueeSkills.map((skill) => (
+            <>
+              <span className="px-2 font-anton xl:text-xl">{t(skill)}</span>
+              <div>
+                <Subtract />
+              </div>
+            </>
+          ))}
         </div>
       ))}
     </div>

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 
 import logo from '@/assets/images/logo.png';
-import Link from 'next/link';
 import { ROUTES } from '@/utils/constants/constants';
 
 const Logo = () => {
