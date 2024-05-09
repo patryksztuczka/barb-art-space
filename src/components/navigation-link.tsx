@@ -12,8 +12,8 @@ interface INavigationLinkProps {
 const NavigationLink = ({
   href,
   label,
-  download,
-  target,
+  download = false,
+  target = '_self',
   onClick,
 }: INavigationLinkProps) => {
   return (

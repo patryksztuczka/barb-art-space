@@ -1,12 +1,23 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import blurrySubtract from '@/assets/images/blurry-subtract.svg';
 import Subtract from '@/assets/icons/subtract';
 
-const IdNowPage = () => {
+interface Params {
+  params: {
+    locale: string;
+    work: string;
+  };
+}
+
+const IdNowPage = ({ params: { work, locale } }: Params) => {
+  unstable_setRequestLocale(locale);
+
   const t = useTranslations();
+
   return (
     <div className="grid w-full grid-cols-1 p-5 xl:max-w-7xl xl:grid-cols-2 xl:gap-x-[90px] xl:px-6 xl:py-4">
       <section className="flex flex-col gap-6 pb-6 pt-5 xl:col-span-2 xl:flex-row xl:gap-10 xl:pb-10 xl:pt-4">

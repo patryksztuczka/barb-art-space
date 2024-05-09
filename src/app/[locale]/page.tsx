@@ -1,5 +1,7 @@
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import InfiniteMarquee from '@/components/infinite-marquee';
 import FeaturedWorkCard from '@/components/featured-work-card';
@@ -8,12 +10,11 @@ import LandingSection from '@/components/landing-section';
 import OtherWorkCard from '@/components/other-work-card';
 import { featuredWork, otherWork } from '@/utils/constants/constants';
 
-export default function Index({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+const MainPage = ({ params: { locale } }: { params: { locale: string } }) => {
+  unstable_setRequestLocale(locale);
+
   const t = useTranslations();
+
   return (
     <>
       <div className="w-full xl:max-w-7xl">
@@ -65,4 +66,6 @@ export default function Index({
       </div>
     </>
   );
-}
+};
+
+export default MainPage;

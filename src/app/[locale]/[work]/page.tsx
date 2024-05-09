@@ -1,9 +1,11 @@
-import { ROUTES, featuredWorkCaseStudy } from '@/utils/constants/constants';
-import { useTranslations } from 'next-intl';
+import React from 'react';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
-import React from 'react';
+import { useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
+
 import blurrySubtract from '@/assets/images/blurry-subtract.svg';
+import { ROUTES, featuredWorkCaseStudy } from '@/utils/constants/constants';
 
 interface Params {
   params: {
@@ -12,7 +14,13 @@ interface Params {
   };
 }
 
-const WorkPage = ({ params: { work } }: Params) => {
+export const generateStaticParams = () => {
+  return featuredWorkCaseStudy.map((caseStudy) => ({ work: caseStudy.id }));
+};
+
+const WorkPage = ({ params: { work, locale } }: Params) => {
+  unstable_setRequestLocale(locale);
+
   const caseStudy = featuredWorkCaseStudy.find((item) => item.id === work);
 
   if (!caseStudy) {
@@ -56,7 +64,7 @@ const WorkPage = ({ params: { work } }: Params) => {
         {images.map((image, index) =>
           index !== 0 ? (
             <div
-              key={index}
+              key={image}
               className="relative mb-6 h-[250px] xl:mb-10 xl:h-[650px]"
             >
               <Image src={image} alt="" fill className="object-cover" />
