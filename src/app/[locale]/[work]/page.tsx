@@ -64,7 +64,7 @@ const WorkPage = ({ params: { work, locale } }: Params) => {
         {images.map((image, index) =>
           index !== 0 ? (
             <div
-              key={index}
+              key={image}
               className="relative mb-6 h-[250px] xl:mb-10 xl:h-[650px]"
             >
               <Image src={image} alt="" fill className="object-cover" />

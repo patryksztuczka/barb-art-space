@@ -1,7 +1,8 @@
-import { IOtherWork } from '@/utils/types/types';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { createElement } from 'react';
+
+import { IOtherWork } from '@/utils/types/types';
 
 export interface IOtherWorkCardProps {
   work: IOtherWork;
@@ -24,9 +25,9 @@ const OtherWorkCard = ({ work }: IOtherWorkCardProps) => {
       </div>
       {icons && icons.length > 0 ? (
         <div className="flex items-end justify-end gap-1">
-          {icons.map((icon, i) => (
+          {icons.map((icon) => (
             <div
-              key={i}
+              key={icon.toString()}
               className="xl:invisible xl:translate-y-6 xl:transition-transform xl:group-hover:visible xl:group-hover:translate-y-0"
             >
               {createElement(icon)}

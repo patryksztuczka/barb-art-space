@@ -29,4 +29,10 @@ const NavigationLink = ({
   );
 };
 
+NavigationLink.defaultProps = {
+  download: false,
+  target: '_self',
+  onClick: () => {},
+};
+
 export default NavigationLink;

@@ -1,5 +1,5 @@
+import React, { ReactNode } from 'react';
 import { Metadata } from 'next';
-import { ReactNode } from 'react';
 import { Epilogue, Anton } from 'next/font/google';
 import localfont from 'next/font/local';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   title: 'Barbara Morawiak',
 };
 
-export default function LocaleLayout({
+const LocaleLayout = ({
   children,
   params: { locale },
 }: {
   children: ReactNode;
   params: { locale: string };
-}) {
+}) => {
   unstable_setRequestLocale(locale);
 
   return (
@@ -66,4 +66,6 @@ export default function LocaleLayout({
       </body>
     </html>
   );
-}
+};
+
+export default LocaleLayout;
