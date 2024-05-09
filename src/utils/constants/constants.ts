@@ -1,7 +1,8 @@
 import FigmaIcon from '@/assets/icons/figma-icon';
-import { IFeaturedWork, IOtherWork } from '../types/types';
 import PhotoshopIcon from '@/assets/icons/photoshop-icon';
 import IlustratorIcon from '@/assets/icons/ilustrator-icon';
+
+import { IFeaturedWork, IOtherWork } from '../types/types';
 
 export const ROUTES = {
   home: '/',
@@ -13,6 +14,13 @@ export const ROUTES = {
   workSection: '/#work',
   aboutSection: '/#about',
 } as const;
+
+export const marqueeSkills = [
+  'classicalArts',
+  'userInterface',
+  'userExperience',
+  'graphicDesign',
+] as const;
 
 export const featuredWork: IFeaturedWork[] = [
   {

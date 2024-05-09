@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -8,12 +9,9 @@ import LandingSection from '@/components/landing-section';
 import OtherWorkCard from '@/components/other-work-card';
 import { featuredWork, otherWork } from '@/utils/constants/constants';
 
-export default function Index({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+const MainPage = ({ params: { locale } }: { params: { locale: string } }) => {
   const t = useTranslations();
+
   return (
     <>
       <div className="w-full xl:max-w-7xl">
@@ -65,4 +63,6 @@ export default function Index({
       </div>
     </>
   );
-}
+};
+
+export default MainPage;
