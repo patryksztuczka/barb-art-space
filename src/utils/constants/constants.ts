@@ -68,7 +68,7 @@ export const featuredWork: IFeaturedWork[] = [
 export const otherWork: IOtherWork[] = [
   {
     id: 1,
-    title: 'SFM - Funacja aktywnego rozwoju',
+    title: 'SFM - Fundacja aktywnego rozwoju',
     description: 'sfmDescription',
     thumbnail: '/images/other-work/sfm-thumbnail.png',
     icons: [PhotoshopIcon, IlustratorIcon],
