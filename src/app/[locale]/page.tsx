@@ -26,7 +26,7 @@ const UnderConstructionPage = () => {
             experience.
           </p>
 
-          {/* Launch status (no fake loading bar) */}
+          {/* Launch status */}
           <div className="mt-8 space-y-4">
             <div className="flex items-center justify-between font-epilogue text-[10px] uppercase tracking-[0.2em] text-white/50 md:text-xs">
               <span>Launch status</span>
