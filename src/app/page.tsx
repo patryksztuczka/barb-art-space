@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Logo from '@/components/logo';
+
 const UnderConstructionPage = () => {
   return (
     <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#03030A] text-white">
@@ -11,6 +13,9 @@ const UnderConstructionPage = () => {
       <div className="bg-[#FF5E7E]/14 pointer-events-none absolute -bottom-40 -right-24 h-64 w-64 rounded-full blur-3xl md:-bottom-48 md:-right-40 md:h-96 md:w-96" />
 
       <main className="relative mx-6 w-full max-w-xl">
+        <div className="mb-8 flex justify-center md:justify-start">
+          <Logo />
+        </div>
         <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-[0_0_80px_rgba(0,0,0,0.7)] backdrop-blur-xl md:p-10">
           <span className="font-epilogue text-[10px] uppercase tracking-[0.3em] text-white/60 md:text-xs">
             Portfolio refresh in progress
@@ -26,31 +31,15 @@ const UnderConstructionPage = () => {
             experience.
           </p>
 
-          {/* Launch status (no fake loading bar) */}
-          <div className="mt-8 space-y-4">
+          {/* Fancy progress bar */}
+          <div className="mt-8">
             <div className="flex items-center justify-between font-epilogue text-[10px] uppercase tracking-[0.2em] text-white/50 md:text-xs">
-              <span>Launch status</span>
-              <span className="rounded-full bg-white/10 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.25em] text-white/80 md:text-[10px]">
-                In progress
-              </span>
+              <span>Phase one</span>
+              <span>68%</span>
             </div>
-
-            <ul className="space-y-2 font-epilogue text-xs text-white/70 md:text-sm">
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#F9B54C]" />
-                <span>
-                  Refreshing recent case studies and process write-ups
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#FF5E7E]" />
-                <span>Polishing visuals and motion details</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#FDFF9C]" />
-                <span>Final review before going live</span>
-              </li>
-            </ul>
+            <div className="mt-3 h-1.5 w-full rounded-full bg-white/10">
+              <div className="h-1.5 w-2/3 animate-pulse rounded-full bg-gradient-to-r from-[#F9B54C] via-[#FF5E7E] to-[#FDFF9C]" />
+            </div>
           </div>
 
           <div className="mt-7 flex flex-wrap gap-4 font-epilogue text-[10px] uppercase tracking-[0.2em] text-white/50 md:mt-8 md:text-xs">
